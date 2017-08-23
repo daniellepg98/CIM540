@@ -9,3 +9,8 @@
 [Link to google](http://www.google.com)
 
 ### [github](http://www.github.com)
+
+[Week 1 Readme](https://github.com/daniellepg98/CIM540/blob/master/week1/readme.md)
+
+
+![Penguin Image](http://honesttopaws.com/wp-content/uploads/sites/5/2016/02/3-penguins.jpg)
