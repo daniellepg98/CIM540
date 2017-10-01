@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My App</title>
+
+    <style>
+        /* Enter CSS below */
+       h1 {
+            color: brown;
+           font-family: sans-serif;
+           list-style-type: georgian
+        }
+  
+        
+        
+    </style>
+
+ </head>
+
+
+<body>
+
+    <h1>Puppy Age Calculator</h1>
+
+    <p><i>Find out how old you are in dog years!</i></p>
+    
+    
+    
+    <form>
+    
+         
+ <label for="age">Age:</label>
+        
+  <input type="text" name="age" id="age">        
+    <br><br>
+        
+<button type="button" id="aButton">Calculate</button>
+    
+    </form>
+<div id="output"></div>
+    <script>
+       /* Comment: Enter code below */
+        
+   function CalculateDogAge(){
+       
+       var dogYears = document.getElementById("age").value;
+       console.log("dog years " + dogYears);
+    
+
+     var dogYearsRatio = (parseInt(dogYears)/1) * 7;
+       
+   
+       
+       // console.log(dogYearsRatio);
+                
+                var message = "<h1>You are " + dogYearsRatio + " years old in dog years!</h1>";
+                
+                var outputText = document.getElementById("output");
+                outputText.innerHTML = message;
+                
+   }
+    var getButton = document.getElementById("aButton");
+        getButton.addEventListener("click",CalculateDogAge);    
+                
+    age = 7*
+       function calculateDogAge(age) {
+    var dogYears = 7*age;
+    console.log("You are " + dogYears + " years old in dog years!");
+}
+
+
+
+        
+    </script>
+
+            
+<img src="https://images.onlinelabels.com/images/clip-art/molumen/molumen_happy_running_dog.png"> 
+        
+</body>
+
+</html>
