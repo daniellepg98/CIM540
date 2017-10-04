@@ -12,8 +12,9 @@
 
 
 <body>
+<h1 id="myCss">Quiz</h1>
+   
 
-    <h1>Quiz</h1>
 
     <p><i>Answer the following questions</i></p>
 
@@ -84,6 +85,14 @@
 
     <script>
         /* Comment: Enter code below */
+        
+        var cssChange= document.getElementById("myCss");
+        cssChange.style.color = "blue";
+        cssChange.style.fontSize = "40px";
+        cssChange.style.textDecoration = "underline";
+        cssChange.style.fontFamily = "sans-serif";
+        
+        
         function checkAnswers() {
             var counter = 0;
             var answerRatio = 0;
