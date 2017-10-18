@@ -8,29 +8,24 @@ var posY = 0;
 function setup() {
     createCanvas(1000, 1000);
 
-    background(125);
-    background(255, 0, 0);
-    background("#333333");
-    background("cyan");
-
-    background(bgColor);
-
-    posX = width / 2;
-    posY = 300;
+posX = width / 2;
+posY = 300;
 
 
 }
 
 function draw() {
+background(bgColor);
+    
+    
     strokeWeight(0);
-    //Face
+//Face
     fill("white");
     ellipse(posX, posY, fSize, fSize);
 
     strokeWeight(2);  
    
-    
-    //mouth
+//mouth
     fill("red");
     rect(460, posY+65, 80, 20);
  strokeWeight(3); 
@@ -57,6 +52,7 @@ line(posX+25,230,posX+80 ,230 )
   //clownnose
     fill("red")
     ellipse(posX, posY+10, 50, 50);
+    
    
   
 }
