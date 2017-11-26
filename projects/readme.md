@@ -1,3 +1,16 @@
-### Week 3 <i>Puppy Age Calculator</i>
+# CIM540
 
-![Paws Image](https://i.pinimg.com/736x/8f/99/8a/8f998ada3f97f9e30676955b7daf0806--art-clipart-clipart-images.jpg)
+## This is smaller than above
+
+### This is even smaller
+
+###### This might be the smallest
+
+[Link to google](http://www.google.com)
+
+### [github](http://www.github.com)
+
+[Week 1 Readme](https://github.com/daniellepg98/CIM540/blob/master/week1/readme.md)
+
+
+![Penguin Image](http://honesttopaws.com/wp-content/uploads/sites/5/2016/02/3-penguins.jpg)

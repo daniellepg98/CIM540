@@ -42,11 +42,11 @@ var trigger = false;
 function preload(){
     bgImage = loadImage("assets/tent.png")
     bgImage2 = loadImage("assets/redballoons.jpg");
-    bgImage3 = loadImage("assets/1balloon.png");
     
     redballoons = loadImage("assets/1balloon.png");
     
     carnivaltext = loadImage("assets/carnivaltext.png");
+    
 }
 
 
