@@ -1,4 +1,6 @@
 
+
+
 var imgs = [];  // Declare variable 'img'.
 
 

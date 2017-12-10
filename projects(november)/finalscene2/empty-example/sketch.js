@@ -6,6 +6,11 @@ var timeleft;
 
 var soundFile;
 
+
+var levels = [["pan"], ["pan","dog"], ["pan", "dog", "redstool"], ["pan", "dog", "redstool",]];
+
+var curLevel = 0;
+
 function preload() {
     
 soundFile1 = loadSound('assets/youlose.mp3');
@@ -44,27 +49,20 @@ createCanvas(1444, 1132);
     // Load the image
     
  var curImg2 = loadImage("assets/picframe.png");
-  imgs["picframe"] = {"x2":513.00,"y2":161.50, "image":curImg2};
+  imgs["picframe"] = {"x":513.00,"y":161.50, "image":curImg2};
     // Load the image
     
     var curImg3 = loadImage("assets/flowersforlivingroom.png");
-  imgs["flowers"] = {"x3":600.50,"y3":69.50, "image":curImg3};
+  imgs["flowers"] = {"x":600.50,"y":69.50, "image":curImg3};
     // Load the image
     
      var curImg4 = loadImage("assets/livingroom!!.jpg", (2000,1420));
-  imgs["livingroom"] = {"x4": 0,"y4": 0, "image":curImg4};
+  imgs["livingroom"] = {"x": 0,"y": 0, "image":curImg4};
   
     
     
 }
-//this.clicked = function(){
-    
-    
-     
-//function mousePressed(){
-//if (curImg7.clicked();
- //  )
-//}
+
 
 function draw() {
 
@@ -72,15 +70,15 @@ function draw() {
     
 // Displays the image at its actual size at point (0,0)
     
-    image(imgs["livingroom"].image, imgs["livingroom"].x4, imgs["livingroom"].y4, imgs["livingroom"].image.width, imgs["livingroom"].image.height);
+    image(imgs["livingroom"].image, imgs["livingroom"].x, imgs["livingroom"].y, imgs["livingroom"].image.width, imgs["livingroom"].image.height);
     
   image(imgs["remote"].image, imgs["remote"].x, imgs["remote"].y, imgs["remote"].image.width, imgs["remote"].image.height);
     
  
     
-     image(imgs["picframe"].image, imgs["picframe"].x2, imgs["picframe"].y2, imgs["picframe"].image.width, imgs["picframe"].image.height);
+     image(imgs["picframe"].image, imgs["picframe"].x, imgs["picframe"].y, imgs["picframe"].image.width, imgs["picframe"].image.height);
     
-    image(imgs["flowers"].image, imgs["flowers"].x3, imgs["flowers"].y3, imgs["flowers"].image.width, imgs["flowers"].image.height);
+    image(imgs["flowers"].image, imgs["flowers"].x, imgs["flowers"].y, imgs["flowers"].image.width, imgs["flowers"].image.height);
     
     fill("white");
     rect(500,20,400,50);
@@ -88,52 +86,34 @@ function draw() {
     text("Find the remote",500,60);
     textSize(50);
     
-//imgs[curImg7].check();
-//imgs[curImg7].display();
-    
-    
-//function mousePressed(){
-//if (imgs[curImg7].check() == true){
-   // soundFile1.play;
-}    
+
+}
+
+function mousePressed(){
+    for (item in imgs){
+       // console.log(item);
+       if(mouseX > imgs[item].x && mouseX < (imgs[item].x + imgs[item].image.width) && mouseY > imgs[item].y && mouseY < (imgs[item].y + imgs[item].image.height)){
+           console.log(item);
+           
+       //levels["pan"]++;
+        //curLevel[1]++;
+        //curLevel [2]++;   
+    // soundFile2.play();
+    fill("white");
+    rect(500,20,400,50);
+    fill("black");
+    var levelText = "Find the" + levels[(curLevel++)];
+    levels[curLevel]++;       
+    text(levelText,500,60);
+    textSize(50);
     
 
+       }
+        
+    }
     
+}
 
     
    
-   // fill("white");
-    //rect(500,20,400,50);
-    //fill("black");
-   // text("Find the eggs",500,60);
-    //textSize(50);
-    
-    
-    // fill("white");
-    //rect(500,20,400,50);
-    //fill("black");
-   // text("Find the dog",500,60);
-    //textSize(50);
-    
-    
-
-    
-    //curImg8.check());
-    
-    //this.mousePressed(){
-       //if(curImg8.check() == true){
-    // soundFile1.play; 
-    //}
-    
-    
-     ///if(curImg8.check() == true){
-       // soundFile1.play;
-         
-         
-         
-     //}   
-        
-    
-    
-    
-
+  
