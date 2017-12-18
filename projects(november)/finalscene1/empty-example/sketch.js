@@ -16,6 +16,16 @@ var levels = [["pan"], ["dog"], ["redstool"], ["flowers"], ["eggs"], ["plates"]]
 
 var curLevel = 0;
 
+//var hitZoneX=513;
+////
+//var hitZoneY=160.5;
+//
+////var dist;
+//
+////var mouseX;
+//
+////var mouseY;
+
 
 function preload() {
     
@@ -25,7 +35,13 @@ soundFile2 = loadSound('assets/eggfrying.mp3');
     
 soundFile3 = loadSound('assets/dog.mp3');
     
-soundFile4 = loadSound('assets/timer.mp3');    
+soundFile4 = loadSound('assets/timer.mp3'); 
+    
+soundFile5 = loadSound('assets/yay.mp3');  
+
+soundFile6 = loadSound('assets/tryagain.mp3');
+    
+food = loadImage("assets/food.jpg");    
     
     
  
@@ -33,7 +49,7 @@ soundFile4 = loadSound('assets/timer.mp3');
 
 function setup() {
     
-var timeleft = 15; //make it 30 
+var timeleft = 30; //make it 30 
    
 
 var interval= setInterval(timeIt, 1000);
@@ -101,6 +117,7 @@ createCanvas(1000, 710);
 //    
  var curImg8 = loadImage("assets/pinkstools.png");
 imgs["pinkstools"] = {"x":65.50,"y":450.5, "image":curImg8};
+    
     // Load the image
     
 
@@ -165,14 +182,35 @@ function draw() {
 //     image(imgs2["picframe"].image, imgs2["picframe"].x, imgs2["picframe"].y, imgs2["picframe"].image.width, imgs2["picframe"].image.height);
     
     
-    fill("white");
-    rect(500,20,400,50);
-    fill("black");
-    var levelText = "Find the " + levels[curLevel];
-    text(levelText,500,60);
-    textSize(50);
+
+    
+    var col = color(176,224,230);
+textSize(50); 
+var button = createButton("Click to find the objects");
+button.style("background-color", col);
+button.size(150,50);    
+button.position(450, 30);
+    
+ var col = color(176,224,230);
+textSize(50); 
+var button = createButton("Find the " + levels[curLevel]);
+button.style("background-color", col);
+button.size(150,50);    
+button.position(450, 70);
+       
+    
+//    fill("white");
+//    rect(300,20,350,50);
+//    fill("black");
+//    var levelText = "Find the " + levels[curLevel];
+//    text(levelText,300,60);
+//    textSize(50);
+//    textFont("Helvetica");
+//   
     
    }
+
+
 
 function mousePressed(){
     for (item in imgs){
@@ -186,21 +224,51 @@ function mousePressed(){
                curLevel++;
                
                 }
+//           else{
+//               
+//               soundFile6.play();
+//           }
+//           
+           
+           
            
 //           if(curLevel >= levels.length){
            
-           //if(levels[1] == true){
-              // soundFile3.play();
+           if(item== levels[1]){
+               soundFile3.play();
+          //  if(item > levels[1]) {
+                
+        
+            //}  
+           
+       }
+           
+         //  if (item== levels[4]){
+          //     soundFile2.play();
+           //    display.image()
+               
+           }
            }
                 if(curLevel >= levels.length){
                  curLevel=0;    
               var youwin = select('#youwin');
                     
-              youwin.html("you win!");
+                    
+         
+                    youwin.html("you win!");
+                 soundFile5.play();  
                 
                   }
               
-          
+          var hitZoneDist = dist(mouseX, mouseY, hitZoneX, hitZoneY);
+console.log(hitZoneDist);
+
+//if (hitZoneDist < 40) {
+    
+    
+   // image(food, 200,200)
+    
+//}
            
             }
     
@@ -212,7 +280,7 @@ function mousePressed(){
 
         
             
-        }
+        
 
   
     
